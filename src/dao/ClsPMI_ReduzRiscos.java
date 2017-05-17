@@ -24,7 +24,7 @@ public class ClsPMI_ReduzRiscos {
     private Connection connect() throws ClassNotFoundException {
 
     	// SQLite connection string
-        String url = "jdbc:sqlite:" + System.getenv("OPENSHIFT_DATA_DIR") + "//GerenciaProjetos//GerenciaProjetos.db";
+        String url = "jdbc:sqlite:" + System.getenv("OPENSHIFT_DATA_DIR") + "//GerenciaProjetos.db";
 
         Connection conn = null;
         try {
