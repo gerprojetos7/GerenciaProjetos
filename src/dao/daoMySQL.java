@@ -38,7 +38,7 @@ public class daoMySQL {
 				Class.forName("com.mysql.jdbc.Driver");
 	 
 	            String serverName = System.getenv("MYSQL_SERVICE_HOST");    
-	            String mydatabase = System.getenv("MYSQL_DATABASET");        
+	            String mydatabase = System.getenv("MYSQL_DATABASE");        
 	            String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
 	            String username = System.getenv("MYSQL_USER");              
 	            String password = System.getenv("MYSQL_PASSWORD");      
