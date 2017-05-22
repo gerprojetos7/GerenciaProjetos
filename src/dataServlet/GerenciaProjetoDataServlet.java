@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import beans.GerenciaProjeto;
-import dao.ClsPMI_ReduzRiscos;
+import dao.daoMySQL;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +28,6 @@ public class GerenciaProjetoDataServlet extends HttpServlet {
      */
     public GerenciaProjetoDataServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 
@@ -65,7 +64,7 @@ public class GerenciaProjetoDataServlet extends HttpServlet {
 		gerProjetos.setChkEstrategiaRiscos04(request.getParameter("chkEstrategiaRiscos04"));
 		
 		try {
-			ClsPMI_ReduzRiscos gerProjDAO = new ClsPMI_ReduzRiscos();
+			daoMySQL gerProjDAO = new daoMySQL();
 			int idProjeto = gerProjDAO.insertResultadosRiscosRecomendacao(gerProjetos, response);
 			
 			GerenciaProjeto gp = new GerenciaProjeto();
@@ -73,7 +72,6 @@ public class GerenciaProjetoDataServlet extends HttpServlet {
             ServRecomendacaoRiscosGerenciamentoProjeto(response, gp);
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
             System.out.println(e.getMessage());
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			e.printStackTrace();
@@ -83,7 +81,7 @@ public class GerenciaProjetoDataServlet extends HttpServlet {
     @SuppressWarnings({ "unchecked", "null", "unused" })    
 	public void ServRecomendacaoRiscosGerenciamentoProjeto(HttpServletResponse response, GerenciaProjeto gp) throws ClassNotFoundException, IOException {
     	
-		List<GerenciaProjeto> GerProjetos = new ClsPMI_ReduzRiscos().selectAllLista(gp, response);
+		List<GerenciaProjeto> GerProjetos = new daoMySQL().selectAllLista(gp, response);
 
         if (GerProjetos != null) {            		
 		
