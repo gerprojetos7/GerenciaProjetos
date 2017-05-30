@@ -41,7 +41,6 @@ public class GerenciaProjeto implements List<GerenciaProjeto> {
 	 private String engajamentoEquipe;            
 	 private String priorizacaoFuncionalidades;
 	 private String termoAberturaProjeto;	 
-	 private String estruturaAnalíticaProjetoEAP;	 
 	 private String custos;
 	 private String prazos;	 
 	 private String arquiteturaSoftware;	 
@@ -84,7 +83,7 @@ public class GerenciaProjeto implements List<GerenciaProjeto> {
 	        //super();
 	}	 
 
-    public GerenciaProjeto(int idprojeto, String projeto, String descricao, String porte, String modelagem, String resultadosRiscos, String prioridade, String qtdestakeholders, String datainicio, String datafim, String gerente, String status, String complexidade, String observacao, String prazoProjeto, String custoProjeto, String cronograma, String planoGerenciamentoEscopo, String planoGerenciamentoRequisitos, String planoGerenciamentoCronograma, String planoGerenciamentoCustos, String planoGerenciamentoQualidade, String planoMelhoriasProcesso, String planoGerenciamentoRecursosHumanos, String planoGerenciamentoComunicacoes, String planoGerenciamentoRiscos, String planoGerenciamentoAquisicoes, String linhaBaseCronograma, String linhaBaseDesempenhoCustos, String linhaBaseEscopo, String responsabilidadesEquipe, String engajamentoEquipe, String priorizacaoFuncionalidades, String termoAberturaProjeto, String estruturaAnalíticaProjetoEAP, String custos, String prazos, String arquiteturaSoftware, String treinamentoEquipe, String feriasEquipe, String saidaEquipe, String excessoHorasExtrasEquipe, String absenteismoEquipe, String integranteProjetoDoente, String produtividadeEquipe, String integrantesDemitidosProjeto, String nivelCapacitacaoEquipe, String nivelEntrosamentoEquipe, String aquisicoesProjeto, String impactoRiscoEscopoProjeto, String impactoRiscoQualidadeProjeto, String ambienteEstruturalProjeto, String chkEstrategiaRiscos01, String chkEstrategiaRiscos02, String chkEstrategiaRiscos03, String chkEstrategiaRiscos04, int pesoCronograma, int pesoEscopo, int pesoCusto, int pesoRequisitos, int somaPesos, float percentSimilaridade) {
+    public GerenciaProjeto(int idprojeto, String projeto, String descricao, String porte, String modelagem, String resultadosRiscos, String prioridade, String qtdestakeholders, String datainicio, String datafim, String gerente, String status, String complexidade, String observacao, String prazoProjeto, String custoProjeto, String cronograma, String planoGerenciamentoEscopo, String planoGerenciamentoRequisitos, String planoGerenciamentoCronograma, String planoGerenciamentoCustos, String planoGerenciamentoQualidade, String planoMelhoriasProcesso, String planoGerenciamentoRecursosHumanos, String planoGerenciamentoComunicacoes, String planoGerenciamentoRiscos, String planoGerenciamentoAquisicoes, String linhaBaseCronograma, String linhaBaseDesempenhoCustos, String linhaBaseEscopo, String responsabilidadesEquipe, String engajamentoEquipe, String priorizacaoFuncionalidades, String termoAberturaProjeto, String custos, String prazos, String arquiteturaSoftware, String treinamentoEquipe, String feriasEquipe, String saidaEquipe, String excessoHorasExtrasEquipe, String absenteismoEquipe, String integranteProjetoDoente, String produtividadeEquipe, String integrantesDemitidosProjeto, String nivelCapacitacaoEquipe, String nivelEntrosamentoEquipe, String aquisicoesProjeto, String impactoRiscoEscopoProjeto, String impactoRiscoQualidadeProjeto, String ambienteEstruturalProjeto, String chkEstrategiaRiscos01, String chkEstrategiaRiscos02, String chkEstrategiaRiscos03, String chkEstrategiaRiscos04, int pesoCronograma, int pesoEscopo, int pesoCusto, int pesoRequisitos, int somaPesos, float percentSimilaridade) {
     	this.idprojeto = idprojeto;
         this.projeto = projeto;
         this.descricao = descricao;
@@ -119,7 +118,6 @@ public class GerenciaProjeto implements List<GerenciaProjeto> {
         this.engajamentoEquipe = engajamentoEquipe;        
         this.priorizacaoFuncionalidades = priorizacaoFuncionalidades;        
         this.termoAberturaProjeto = termoAberturaProjeto;        
-        this.estruturaAnalíticaProjetoEAP = estruturaAnalíticaProjetoEAP;        
         this.custos = custos;        
         this.prazos = prazos;        
         this.arquiteturaSoftware = arquiteturaSoftware;        
@@ -419,14 +417,6 @@ public class GerenciaProjeto implements List<GerenciaProjeto> {
 		  this.termoAberturaProjeto = termoAberturaProjeto;
 	 }	 
 
-	 public String getEstruturaAnalíticaProjetoEAP() {
-		  return estruturaAnalíticaProjetoEAP;
-	 }
-
-	 public void setEstruturaAnalíticaProjetoEAP(String estruturaAnalíticaProjetoEAP) {
-		  this.estruturaAnalíticaProjetoEAP = estruturaAnalíticaProjetoEAP;
-	 }
-	 
 	 public String getCustos() {
 		  return custos;
 	 }

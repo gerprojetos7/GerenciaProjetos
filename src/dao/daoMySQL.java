@@ -25,7 +25,7 @@ import beans.GerenciaProjeto;
 
 public class daoMySQL {
 	
-	public static String status = "Não conectou...";
+	public static String status = "Nao conectou...";
 	
 	public daoMySQL() {
 		
@@ -36,24 +36,24 @@ public class daoMySQL {
 		Connection connection = null;          
         try {
 				Class.forName("com.mysql.jdbc.Driver");
-	 
+				
 	            String serverName = System.getenv("MYSQL_SERVICE_HOST");    
 	            String mydatabase = System.getenv("MYSQL_DATABASE");        
 	            String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
 	            String username = System.getenv("MYSQL_USER");              
 	            String password = System.getenv("MYSQL_PASSWORD");      
-	 
+		
 	            connection = DriverManager.getConnection(url, username, password);
 	 
 	            if (connection != null) {
 	                status = ("STATUS ---> Conectado com sucesso!");
 	            } else {
-	                status = ("STATUS ---> Não foi possivel realizar conexão");
+	                status = ("STATUS ---> Nao foi possivel realizar conexao");
 	            }
 	            return connection;
 	 
 	        } catch (SQLException e) {
-	            System.out.println("Não foi possível conectar ao Banco de Dados.");
+	            System.out.println("Nao foi possivel conectar ao Banco de Dados.");
 	            return null;
 	        }
     }
@@ -98,7 +98,7 @@ public class daoMySQL {
             gp.setPesoCronograma(pesoCronograma);
         }
         
-        if (gp.getPlanoGerenciamentoCronograma().equalsIgnoreCase("Não Definido")) {
+        if (gp.getPlanoGerenciamentoCronograma().equalsIgnoreCase("Nï¿½o Definido")) {
             pesoCronograma = 2;
             gp.setPesoCronograma(pesoCronograma);
         }
@@ -114,7 +114,7 @@ public class daoMySQL {
             gp.setPesoEscopo(pesoEscopo);
         }
 
-        if (gp.getPlanoGerenciamentoEscopo().equalsIgnoreCase("Não Definido")) {
+        if (gp.getPlanoGerenciamentoEscopo().equalsIgnoreCase("Nï¿½o Definido")) {
             pesoEscopo = 2;            
             gp.setPesoEscopo(pesoEscopo);
         }
@@ -130,7 +130,7 @@ public class daoMySQL {
             gp.setPesoCusto(pesoCusto);
         }
 
-        if (gp.getPlanoGerenciamentoCustos().equalsIgnoreCase("Não Definido")) {
+        if (gp.getPlanoGerenciamentoCustos().equalsIgnoreCase("Nï¿½o Definido")) {
             pesoCusto = 2;
             gp.setPesoCusto(pesoCusto);
         }
@@ -146,7 +146,7 @@ public class daoMySQL {
             gp.setPesoRequisitos(pesoRequisitos);
         }
 
-        if (gp.getPlanoGerenciamentoRequisitos().equalsIgnoreCase("Não Definido")) {
+        if (gp.getPlanoGerenciamentoRequisitos().equalsIgnoreCase("Nï¿½o Definido")) {
             pesoRequisitos = 2;
             gp.setPesoRequisitos(pesoRequisitos);
         }
@@ -196,7 +196,7 @@ public class daoMySQL {
 	        
 	        int count = pstmt.executeUpdate();
 	        
-	        //Se o insert for bem sucedido, será feita a recomendação. 
+	        //Se o insert for bem sucedido, serï¿½ feita a recomendaï¿½ï¿½o. 
 	        if (count > 0) {
 	        	
 		        ResultSet rs = pstmt.getGeneratedKeys();
@@ -219,7 +219,7 @@ public class daoMySQL {
     
     
     /**
-     * Retorna o Intervalo Máximo para a Recomendação dos Projetos.
+     * Retorna o Intervalo Mï¿½ximo para a Recomendaï¿½ï¿½o dos Projetos.
      * @param  
      * @return 
      * @throws IOException 
@@ -254,7 +254,7 @@ public class daoMySQL {
     
     
     /**
-     * Retorna o Intervalo Mínimo para a Recomendação dos Projetos.
+     * Retorna o Intervalo Mï¿½nimo para a Recomendaï¿½ï¿½o dos Projetos.
      * @param  
      * @return 
      * @throws IOException 
